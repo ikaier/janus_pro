@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'products/index'
   get 'wishlists/index'
   devise_for :users
   root to: 'pages#home'
