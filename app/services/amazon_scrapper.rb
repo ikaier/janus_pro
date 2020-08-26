@@ -7,6 +7,7 @@ class AmazonScrapper
   end
 
   def scrap
+    sleep(1)
     url = "https://www.amazon.com/s?k=" + @item
     html_file = Faraday.get url
     html_doc = Nokogiri::HTML(html_file.body)
@@ -20,7 +21,7 @@ class AmazonScrapper
 
     counter = 0
     html_doc.css('.sg-row .sg-col-inner .sg-col-inner span div div div .sg-row div .sg-col-inner .sg-row div .sg-col-inner .a-section h2 a').each do |element|
-      infos[counter][:url] = "www.amazon.com" + element.attribute('href').value
+      infos[counter][:url] = "https://www.amazon.com" + element.attribute('href').value
       infos[counter][:name] = element.text.strip
       counter = counter + 1
     end

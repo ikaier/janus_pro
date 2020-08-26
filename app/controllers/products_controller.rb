@@ -1,6 +1,8 @@
 class ProductsController < ApplicationController
   def index
     @products = Product.all
+    @scrapper = AmazonScrapper.new("earphone")
+    @infos = @scrapper.scrap
   end
 
   def create
