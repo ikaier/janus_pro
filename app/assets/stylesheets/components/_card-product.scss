@@ -1,0 +1,90 @@
+.card-product {
+  overflow: hidden;
+  height: 280px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+}
+
+.card-body {
+  margin-top: 20px;
+}
+
+.card-product img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 30px;
+  font-weight: bold;
+  color: #161637;
+  margin: 0;
+  margin-bottom: 15px;
+  margin-top: 7px;
+}
+
+.card-pricing {
+  font-size: 30px;
+  font-weight: bold;
+  color: #FF2021;
+  margin: 0;
+  margin-bottom: 15px;
+  margin-top: 7px;
+}
+
+.card-text {
+  font-size: 18px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 30px;
+  margin-top: 8px;
+}
+
+.card-product .card-product-infos {
+  padding: 16px;
+}
+
+.card-rating {
+  color: orange;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.card-visit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-tap {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 20px;
+}
+
+#unsaved-label {
+  padding-right: 20px;
+  display: flex;
+  align-items: center;
+}
+
+#saved-label {
+  padding-right: 20px;
+  display: flex;
+  align-items: center;
+}
+
+#saved-label > i {
+  color: #FF2021;
+}
+
+.save-text {
+  padding-left: 8px;
+  padding-top: 15px;
+  color: #545252;
+}
+
+
