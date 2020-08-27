@@ -2,8 +2,8 @@
   <div class="card mb-3 mt-3" style="max-width: 960px;">
     <div class="row">
         <div class="col-md-4">
-          <% if product.photo.attached? %>
-            <%= cl_image_tag product.photo.key, height: 200, crop: :scale %>
+          <% if product.photo? %>
+            <img src='<%= product[:photo] %>' class="card-img" alt="...">
           <% else %>
             <img src="https://cdn1.iconfinder.com/data/icons/business-company-1/500/image-512.png" class="card-img" alt="...">
           <% end %>
@@ -11,13 +11,13 @@
         <div class="col-md-8">
           <div class="card-body">
             <div class="card-tap">
-              <h2 class="card-title"><%= product.name %></h2>
-              <h3 class="card-pricing">$<%= product.price %></h3>
+              <h2 class="card-title"><%= product[:name][0..16] %></h2>
+              <h3 class="card-pricing">$<%= product[:price] %></h3>
             </div>
-            <span class="card-rating"> <%= product.rating %> </span>
-            <p class="card-text"><%= product.description %></p>
+            <span class="card-rating"> <%= product[:rating] %> </span>
+            <p class="card-text"><%= product[:description] %></p>
               <div class="card-visit">
-                <%= link_to "Visit site", product.url, class: "btn btn-flat" %>
+                <a href='<%= product[:url] %>' class="btn btn-flat">Visit site</a>
                   <div id="saved-label">
                     <i class="far fa-bookmark fa-2x"></i>
                     <p class="save-text">SAVED</p>
