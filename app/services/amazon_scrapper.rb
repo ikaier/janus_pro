@@ -30,7 +30,7 @@ class AmazonScrapper
     counter = 0
 
     html_doc.css('.s-result-item .sg-col-inner span div div div div .sg-row div .sg-col-inner .sg-row div .sg-col-inner .a-section .a-row .a-row a span .a-offscreen').each do |element|
-      if counter > 5
+      if counter > (infos.length - 1)
         next
       end
       infos[counter][:price] = element.text
