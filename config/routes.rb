@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   get "products", to: "products#index"
   get "wishlists", to: "wishlists#index"
+  get "wishlists/new", to: "wishlists#new"
+  post 'wishlists', to:'wishlists#create'
   delete "wishlists/:id", to: "wishlists#destroy"
   devise_for :users
   root to: 'pages#home'
