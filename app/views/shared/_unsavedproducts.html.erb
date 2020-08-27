@@ -2,7 +2,7 @@
   <div class="card mb-3 mt-3" style="max-width: 960px;">
     <div class="row">
         <div class="col-md-4">
-          <% if product.photo? %>
+          <% if !(product[:photo].empty?) %>
             <img src='<%= product[:photo] %>' class="card-img" alt="...">
           <% else %>
             <img src="https://cdn1.iconfinder.com/data/icons/business-company-1/500/image-512.png" class="card-img" alt="...">
@@ -12,7 +12,7 @@
           <div class="card-body">
             <div class="card-tap">
               <h2 class="card-title"><%= product[:name][0..16] %></h2>
-              <h3 class="card-pricing">$<%= product[:price] %></h3>
+              <h3 class="card-pricing"><%= product[:price] %></h3>
             </div>
             <span class="card-rating"> <%= product[:rating] %> </span>
             <p class="card-text"><%= product[:description] %></p>
