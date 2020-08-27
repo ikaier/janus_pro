@@ -4,7 +4,7 @@
 <div class="container" style="position:fix; margin:200px auto;">
     <h1><center><strong>Shop and Save on Millions of Products</strong></center></h1>
     <br/>
-    <%= form_tag() do %>
+    <%= form_tag(search_page_path, :method => "get") do %>
     <div class="input-group md-form form-sm form-2 pl-0 mt-4">
 
       <%= search_field_tag :search, params[:search], placeholder: "Search anything", class: "form-control my-0 py-1 red-border" %>
