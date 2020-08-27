@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get "products", to: "products#index"
+  get "products/search", to: "products#index", :as => 'search_page'
   get "wishlists", to: "wishlists#index"
   delete "wishlists/:id", to: "wishlists#destroy"
   devise_for :users
