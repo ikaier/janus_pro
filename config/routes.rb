@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get "products", to: "products#index"
+  get "products/search", to: "products#index", :as => 'search_page'
   get "wishlists", to: "wishlists#index"
   get "wishlists/new", to: "wishlists#new"
   post 'wishlists', to:'wishlists#create'
