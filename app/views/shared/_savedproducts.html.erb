@@ -12,14 +12,14 @@
           <div class="card-body">
             <div class="card-tap">
               <h2 class="card-title"><%= product[:name][0..16] %></h2>
-              <h3 class="card-pricing">$<%= product[:price] %></h3>
+              <h3 class="card-pricing"><%= product[:price] %></h3>
             </div>
             <span class="card-rating"> <%= product[:rating] %> </span>
             <p class="card-text"><%= product[:description] %></p>
               <div class="card-visit">
                 <a href='<%= product[:url] %>' class="btn btn-flat">Visit site</a>
                 <div class="delete-button">
-                  <%= button_to "Delete", wishlists_path(@wishlist), method: :delete, data: { confirm: "Are you sure?" } %>
+                  <%= button_to "Delete", wishlists_path(@wishlist), params: {id: product.id}, method: :delete, data: { confirm: "Are you sure?" } %>
                 </div>
               </div>
           </div>
