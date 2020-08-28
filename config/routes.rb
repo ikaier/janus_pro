@@ -4,7 +4,10 @@ Rails.application.routes.draw do
   get "wishlists/new", to: "wishlists#new"
   post 'wishlists', to:'wishlists#create'
   delete "wishlists/:id", to: "wishlists#destroy"
+
   devise_for :users
-  root to: 'pages#home'
+  root to: 'pages#home', as: :root
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  
+
 end
