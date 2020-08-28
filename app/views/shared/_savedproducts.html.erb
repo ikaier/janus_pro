@@ -1,4 +1,4 @@
-<% Product.all.each do |product| %>
+<% @infos.all.each do |product| %>
   <div class="card mb-3 mt-3" style="max-width: 960px;">
     <div class="row">
         <div class="col-md-4">
@@ -18,10 +18,9 @@
             <p class="card-text"><%= product[:description] %></p>
               <div class="card-visit">
                 <a href='<%= product[:url] %>' class="btn btn-flat">Visit site</a>
-                  <div id="saved-label">
-                    <i class="far fa-bookmark fa-2x"></i>
-                    <p class="save-text">SAVED</p>
-                  </div>
+                <div class="delete-button">
+                  <%= button_to "Delete", wishlists_path(@wishlist), method: :delete, data: { confirm: "Are you sure?" } %>
+                </div>
               </div>
           </div>
         </div>
