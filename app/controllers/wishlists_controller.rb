@@ -1,6 +1,14 @@
+require 'pry-byebug'
+
+
 class WishlistsController < ApplicationController
   def index
-    @wishlists = Wishlist.all
+    @wishlists = Wishlist.where({ :user => current_user })
+    @products = []
+    @wishlists.each do |wishlist|
+      @products << wishlist.product
+    end
+
   end
 
   def new
@@ -8,10 +16,14 @@ class WishlistsController < ApplicationController
   end
 
   def create
+
     @wishlist = Wishlist.new
-    @wishlist.product = Product.find(params[:product_id])
+    @product = Product.new(product_params)
+    @product.save
+    @wishlist.product = @product
     @wishlist.user = current_user
     @wishlist.save
+
   end
 
   def destroy
@@ -23,5 +35,9 @@ class WishlistsController < ApplicationController
 
   def wishlist_params
     params.require(:wishlist).permit(:product_id)
+  end
+
+  def product_params
+    params.require(:product).permit(:name, :description, :price, :url, :rating, :photo)
   end
 end

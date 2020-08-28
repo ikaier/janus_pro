@@ -19,7 +19,7 @@
               <div class="card-visit">
                 <a href='<%= product[:url] %>' class="btn btn-flat">Visit site</a>
                   <div class=delete-button>
-                    <%= button_to wishlists_path, params: {product_id: product[:id]}, method: :post do%>
+                    <%= button_to wishlists_path, params: {product: product}, method: :post do%>
                     <span class="glyphicon glyphicon-bookmark">SAVE</span>
                     <% end %>
                   </div>
