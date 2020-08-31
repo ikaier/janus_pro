@@ -18,9 +18,7 @@
             <p class="card-text"><%= product[:description] %></p>
               <div class="card-visit">
                 <a href='<%= product[:url] %>' class="btn btn-flat">Visit site</a>
-                <div class="delete-button">
-                  <%= button_to "Delete", wishlists_path(@wishlist), params: {id: product.id}, method: :delete, data: { confirm: "Are you sure?" } %>
-                </div>
+                  <%= button_to "Delete", delete_wishlist_path(Wishlist.find_by product_id: product[:id]), method: :delete, data: { confirm: "Are you sure?" } %>
               </div>
           </div>
         </div>

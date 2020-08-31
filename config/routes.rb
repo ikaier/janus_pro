@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get "wishlists", to: "wishlists#index", as: :wishlists
   get "wishlists/new", to: "wishlists#new"
   post 'wishlists', to:'wishlists#create'
-  delete "wishlists/:id", to: "wishlists#destroy"
+  delete "wishlists/:id", to: "wishlists#destroy", :as => 'delete_wishlist'
 
   devise_for :users
   root to: 'pages#home', as: :root
