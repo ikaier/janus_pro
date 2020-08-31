@@ -1,4 +1,4 @@
-<% @infos.sort_by{|hah| hah[:price].scan(/\d+./).join('').to_f}.each do |product| %>
+<% @infos.sort_by{|hah| hah[:price].scan(/\d+./).join('').to_f}.reverse!.each do |product| %>
   <%= puts product[:price] %>
   <div class="card mb-3 mt-3" style="max-width: 100%;">
     <div class="row">
