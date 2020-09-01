@@ -12,10 +12,12 @@ class ProductsController < ApplicationController
       #@scrapper = EbayScrapper.new(@parameter)
       @scrapper = AmazonScrapper.new(@parameter)
 
-      arramazon = @scrapper.scrap
+      arramazon = @scrapper.scrape
       @scrapper = EbayScrapper.new(@parameter)
       arrebay = @scrapper.scrap
-      @infos = arrebay + arramazon
+      @scrapper = CostcoScrapper.new(@parameter)
+      arrcostco = @scrapper.scrap
+      @infos = arrebay + arramazon + arrcostco
     end
   end
 

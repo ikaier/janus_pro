@@ -16,7 +16,7 @@ class EbayScrapper
 
     html_doc.css('.s-item__info a').each do |element|
       info = {}
-      info = {url: element.attribute('href').value, name: element.text.strip, ratings: "Not available"}
+      info = {url: element.attribute('href').value, name: element.text.strip, ratings: "Not available", source: "ebay"}
       infos.push(info)
     end
 
