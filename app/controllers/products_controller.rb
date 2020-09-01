@@ -8,13 +8,14 @@ class ProductsController < ApplicationController
     else
       @parameter = params[:search].downcase
       @products = Product.all
-      #@scrapper = EbayScrapper.new(@parameter)
-      @scrapper = AmazonScrapper.new(@parameter)
 
-      arramazon = @scrapper.scrap
-      @scrapper = EbayScrapper.new(@parameter)
-      arrebay = @scrapper.scrap
-      @infos = arrebay + arramazon
+      #@scrapper = EbayScrapper.new(@parameter)
+      #@scrapper = AmazonScrapper.new(@parameter)
+
+      #arramazon = @scrapper.scrap
+      #@scrapper = EbayScrapper.new(@parameter)
+      #arrebay = @scrapper.scrap
+      #@infos = arrebay + arramazon
     end
   end
 

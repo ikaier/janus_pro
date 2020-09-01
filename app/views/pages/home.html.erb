@@ -1,11 +1,11 @@
 <body style="background-color:#e4f2f2;">
 
 
-<div class="container" style="position:fix; margin:200px auto;">
+<div class="container" id="canvas_screen" style="position:fix; margin:200px auto;">
     <h1><center><strong id="banner-typed-text"></strong></center></h1>
 
     <br/>
-    <%= form_tag(search_page_path, :method => "get") do %>
+    <%= form_tag(search_page_path, :method => "get", id: "search_form") do %>
     <div class="input-group md-form form-sm form-2 pl-0 mt-4">
 
       <%= search_field_tag :search, params[:search], placeholder: "Search anything", class: "form-control my-0 py-1 red-border" %>
@@ -15,6 +15,8 @@
 
     </div>
     <% end %>
+    <center><div class="" id="loading_block"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></center>
   </div>
 
 </body>
+<%= javascript_pack_tag 'landingpage' %>
