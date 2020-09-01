@@ -2,14 +2,15 @@
 <br>
 <h1>Search Results for "<%= @parameter %>" </h1>
 <br>
+
+
 <div class="btn-group">
   <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Sorted By
   </button>
   <div class="dropdown-menu">
     <%= button_tag "Price Down", type: 'button', onclick: "descending()", class: 'dropdown-item' %>
-    <%= button_tag "Price Up ", type: 'button', onclick: "ascending()", class: 'dropdown-item' %>
-
+    <%= button_tag "Price Up ", type: 'button', onclick: "asending()", class: 'dropdown-item' %>
   </div>
   <div style="position:relative;top:2px;left:20px",class="container">
     <%= form_tag(search_page_path, :method => "get", id: "search_form") do %>
@@ -27,13 +28,26 @@
 </div>
 <center><div class="" id="loading_block"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></center>
 
-<div class="container" style="position:fix; margin: auto">
-  <% @scrapper = AmazonScrapper.new(@parameter) %>
-  <% arramazon = @scrapper.scrap %>
-  <% @scrapper = EbayScrapper.new(@parameter) %>
-  <% arrebay = @scrapper.scrap %>
-  <% @infos = arrebay + arramazon %>
-  <!-- <%= render 'shared/unsavedproducts' %> -->
-  <%= render 'shared/unsavedproducts_d' %>
-  <br>
+
+ <script>
+ function asending(){
+    document.getElementById("asc").style.display="block";
+    document.getElementById("des").style.display="none";
+ }
+
+ function descending(){
+  document.getElementById("asc").style.display="none";
+  document.getElementById("des").style.display="block";
+ }
+  </script>
+
+<div class="container" id="asc" style="position:fix; margin: auto">
+<%= render "shared/unsavedproducts" %>
+<br>
+</div>
+
+<div class="container" id="des" style="position:fix; margin: auto; display: none">
+<%= render "shared/unsavedproducts_d" %>
+<br>
+
 </div>
