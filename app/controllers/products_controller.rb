@@ -15,9 +15,8 @@ class ProductsController < ApplicationController
       arramazon = @scrapper.scrape
       @scrapper = EbayScrapper.new(@parameter)
       arrebay = @scrapper.scrap
-      @scrapper = CostcoScrapper.new(@parameter)
-      arrcostco = @scrapper.scrap
-      @infos = arrebay + arramazon + arrcostco
+
+      @infos = arrebay + arramazon
     end
   end
 
