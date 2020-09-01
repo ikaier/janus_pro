@@ -10,6 +10,5 @@ const saveProduct = document.querySelectorAll('#unsaved-label');
     item.addEventListener('click', (event) => {
       counter.innerText = parseInt(counter.textContent) + 1;
       item.firstElementChild.style.color = "#FF2021";
-      item.lastElementChild.innerText = 'SAVED';
   })
 });
