@@ -1,6 +1,9 @@
 <div class="container">
   <div class="card-deck">
     <% @infos.sort_by{|hah| hah[:price].scan(/\d+./).join('').to_f}.reverse!.each do |product| %>
+
+    <%= puts product[:price] %>
+
       <div class="card mb-3" style="min-width: 18rem;">
         <% if !(product[:photo].empty?) %>
           <img class="card-img-top" src='<%= product[:photo] %>' alt="...">
@@ -15,9 +18,10 @@
         </div>
         <div class="card-footer">
           <a href='<%= product[:url] %>' class="btn btn-flat">Buy Now</a>
-          <%= button_to wishlists_path, id: "unsaved-label", params: {product: product}, class: 'btn bg-transparent', method: :post do %>
-            <i class="fas fa-heart fa-2x"></i>
-          <% end %>
+            <%= button_to wishlists_path, id: "unsaved-label", params: {product: product}, class: 'btn bg-transparent', method: :post do%>
+              <i class="fas fa-heart fa-2x"></i>
+            <% end %>
+
         </div>
       </div>
     <% end %>
