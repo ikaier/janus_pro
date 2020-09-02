@@ -82,7 +82,7 @@ class AmazonScrapper
       infos[counter][:ratings] = element.text.strip
       counter = counter + 1
     end
-    return infos.first(12)
+    return infos.first(6)
   end
 
 end
