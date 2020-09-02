@@ -9,14 +9,14 @@
     Sorted By
   </button>
   <div class="dropdown-menu">
-    <%= button_tag "Price Down", type: 'button', onclick: "descending()", class: 'dropdown-item' %>
-    <%= button_tag "Price Up ", type: 'button', onclick: "asending()", class: 'dropdown-item' %>
+    <%= button_tag "Price: Low to High", type: 'button', onclick: "asending()", class: 'dropdown-item' %>
+    <%= button_tag "Price: High to Low", type: 'button', onclick: "descending()", class: 'dropdown-item' %>
   </div>
   <div style="position:relative;top:2px;left:20px",class="container">
     <%= form_tag(search_page_path, :method => "get", id: "search_form") do %>
     <div class="input-group md-form form-sm form-2 pl-0 ">
       <%= search_field_tag :search, params[:search], placeholder: "Search anything", class: "form-control my-0 py-1 red-border" %>
-      <span class="p-1 mb-1 bg-dark">
+      <span class="py-3 bg-dark">
       <%= button_tag "", :class => 'btn fas fa-search text-light ',:name => nil%>
       </span>
 

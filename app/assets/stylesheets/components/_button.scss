@@ -10,3 +10,13 @@
   background: #ff5252;
   color: white;
 }
+
+.btn-outline-secondary:hover {
+  background: #ff5252;
+  border-color: #ff5252;
+}
+
+.show > .btn-outline-secondary.dropdown-toggle {
+  background: #ff5252;
+  border-color: #ff5252;
+}
