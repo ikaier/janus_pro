@@ -4,8 +4,10 @@ class ApplicationController < ActionController::Base
     return Wishlist.where({ :user => current_user }).count
   end
   helper_method :number_of_wishlists
+
+  def default_url_options
+    { host: ENV["DOMAIN"] || "localhost:3000" }
+  end
 end
 
-def default_url_options
-  { host: ENV["DOMAIN"] || "localhost:3000" }
-end
+
