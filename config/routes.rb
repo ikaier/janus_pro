@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get "products/search", to: "products#index", :as => 'search_page'
   get "products/noresult", to: "products#noresult", :as => 'no_result'
+  get "wishlists/nowishlists", to: "products#nowishlists", :as => 'no_wish'
   get "wishlists", to: "wishlists#index", as: :wishlists
   get "wishlists/new", to: "wishlists#new"
   post 'wishlists', to:'wishlists#create'

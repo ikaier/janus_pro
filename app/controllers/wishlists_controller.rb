@@ -8,6 +8,9 @@ class WishlistsController < ApplicationController
     @wishlists.each do |wishlist|
       @products << wishlist.product
     end
+    if @products.empty?
+      redirect_to(no_wish_path) and return
+    end
 
   end
 
