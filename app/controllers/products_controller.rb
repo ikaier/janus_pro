@@ -17,7 +17,15 @@ class ProductsController < ApplicationController
       arrebay = @scrapper.scrap
 
       @infos = arrebay + arramazon
+      if @infos.empty?
+        redirect_to(no_result_path) and return
+      end
     end
+
+  
+  end
+
+  def noresult
   end
 
 
