@@ -1,30 +1,25 @@
-<% @infos.sort_by{|hah| hah[:price].scan(/\d+./).join('').to_f}.reverse!.each do |product| %>
-  <%= puts product[:price] %>
-  <div class="card mb-3 mt-3" style="max-width: 100%;">
-    <div class="row">
-        <div class="col-md-4">
-          <% if !(product[:photo].empty?) %>
-            <img src='<%= product[:photo] %>' class="card-img" alt="...">
-          <% else %>
-            <img src="https://cdn1.iconfinder.com/data/icons/business-company-1/500/image-512.png" class="card-img" alt="...">
+<div class="container">
+  <div class="card-deck">
+    <% @infos.sort_by{|hah| hah[:price].scan(/\d+./).join('').to_f}.reverse!.each do |product| %>
+      <div class="card mb-3" style="min-width: 18rem;">
+        <% if !(product[:photo].empty?) %>
+          <img class="card-img-top" src='<%= product[:photo] %>' alt="...">
+        <% else %>
+          <img class="card-img-top" src="https://cdn1.iconfinder.com/data/icons/business-company-1/500/image-512.png" alt="...">
+        <% end %>
+        <div class="card-body">
+          <h2 class="card-title"><%= product[:name][0..16] %></h2>
+          <span class="tag tag-pill"><%= product[:price] %></span>
+          <span class="card-text"> <%= product[:rating] %> </span>
+          <p class="card-text"><%= product[:description] %></p>
+        </div>
+        <div class="card-footer">
+          <a href='<%= product[:url] %>' class="btn btn-flat">Buy Now</a>
+          <%= button_to wishlists_path, id: "unsaved-label", params: {product: product}, class: 'btn bg-transparent', method: :post do %>
+            <i class="fas fa-heart fa-2x"></i>
           <% end %>
         </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <div class="card-tap">
-              <h2 class="card-title"><%= product[:name][0..16] %></h2>
-              <h3 class="card-pricing"><%= product[:price] %></h3>
-            </div>
-            <span class="card-rating"> <%= product[:rating] %> </span>
-            <p class="card-text"><%= product[:description] %></p>
-              <div class="card-visit">
-                <a href='<%= product[:url] %>' class="btn btn-flat">Visit site</a>
-                    <%= button_to wishlists_path, id: "unsaved-label", params: {product: product}, method: :post do%>
-                    <span class="glyphicon glyphicon-bookmark">SAVE</span>
-                    <% end %>
-              </div>
-          </div>
-        </div>
-    </div>
+      </div>
+    <% end %>
   </div>
-<% end %>
+</div>
