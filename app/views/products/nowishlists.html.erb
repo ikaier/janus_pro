@@ -1,0 +1,23 @@
+<body style="background-color:white;">
+<div class="row">
+<div class="col-6">
+<%= image_tag "no_wish.jpeg", :style => "width:100%; position:relative; top:20%"%>
+</div>
+<div class="col-6 ">
+<div style="position:absolute; top:50%">
+<h1 class="text-dark">Your wishlist is empty!</h1><br>
+<h1 class="text-secondary">Start to find something new?</h1><br>
+<%= form_tag(search_page_path,id: "search_form", :class => "center-block", :method => "get") do %>
+    <div class="input-group w-50">
+      <%= search_field_tag :search, params[:search], placeholder: "Search Products", class: "form-control red-border pl-4" %>
+      <span class="py-3 bg-dark">
+        <%= button_tag "", :class => 'btn fas fa-search text-light ',:name => nil%>
+      </span>
+    </div>
+    <% end %>
+
+</div>
+</div>
+</div>
+
+</body>

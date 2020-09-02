@@ -28,6 +28,9 @@ class ProductsController < ApplicationController
   def noresult
   end
 
+  def nowishlists
+  end
+
 
 
   def create
