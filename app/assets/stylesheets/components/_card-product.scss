@@ -1,10 +1,16 @@
 .container {
   margin-top: 40px;
 }
+
+.container-fluid {
+  max-width: 80%;
+}
 .card-title {
   font-size: 20px;
   font-weight: bold;
-  color: #161637;
+  color: #494242;
+  text-align: center;
+  margin: auto;
 }
 
 #unsaved-label {
@@ -34,16 +40,12 @@
   border-top: 1px solid #dad7d7;
 }
 
-.card-title {
-  text-align: center;
-  margin: auto;
-}
-
 .card-footer {
   display: inline-flex;
   justify-content: space-between;
   padding-top: 20px;
   padding-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.01);
 }
 
 .fa-heart {
@@ -109,4 +111,17 @@
   right: 20px;
   line-height: 36px;
   box-shadow: 1px 1px 4px #dcd5b9;
+}
+
+.card-container-title {
+  text-align: center;
+  font-size: 48px;
+  color: #423E3E;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  text-shadow: 1px 1px 1px lightgrey;
+}
+
+.row {
+  margin-bottom: 5rem;
 }

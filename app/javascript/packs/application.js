@@ -32,5 +32,4 @@ import { loadDynamicBannerText } from '../components/banner';
       // Call your functions here, e.g:
       // initSelect2();
       //changeIcon();
-      loadDynamicBannerText();
     });
