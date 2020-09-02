@@ -1,0 +1,23 @@
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+}
+
+.banner h1 {
+  color: white;
+  font-size: 70px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 3px;
+  text-shadow: 1px 1px 1px rgba(0,0,0,1);
+}
+
+.banner p {
+  margin-top: 1px;
+  font-size: 30px;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,1);
+  text-align: center;
+  letter-spacing: 2px;
+}

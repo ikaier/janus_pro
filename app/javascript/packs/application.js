@@ -32,6 +32,4 @@ import { loadingEvent } from '../components/loading';
       // Call your functions here, e.g:
       // initSelect2();
       //changeIcon();
-
-      loadingEvent();
     });
