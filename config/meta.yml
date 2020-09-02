@@ -1,0 +1,5 @@
+meta_product_name: "Janus"
+meta_title: "Janus - Finding the best product for you"
+meta_description: "Shop and Save on Millions of Products With just ONE CLICK"
+meta_image: "Janus_logo.png" # should exist in `app/assets/images/`
+twitter_account: "@product_twitter_account"   # required for Twitter Cards

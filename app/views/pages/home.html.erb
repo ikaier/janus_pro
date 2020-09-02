@@ -4,7 +4,7 @@
 
   <div class="container" style="position:fix; margin:200px auto;">
     <h1>Set Up Your Dream Home Office</h1>
-    <p>Shop and Save on Millions of Products</p>
+    <center><span id="banner-typed-text"></span></center>
       <div class="col-sm-12 mt-5">
       <%= form_tag(search_page_path,id: "search_form", :class => "center-block", :method => "get") do %>
       <div class="input-group w-50 mx-auto">
@@ -89,6 +89,7 @@
   </div>
 </div>
 </div>
+<%= javascript_pack_tag 'landingpage' %>
 </body>
 
 

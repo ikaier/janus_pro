@@ -5,3 +5,7 @@ class ApplicationController < ActionController::Base
   end
   helper_method :number_of_wishlists
 end
+
+def default_url_options
+  { host: ENV["DOMAIN"] || "localhost:3000" }
+end
