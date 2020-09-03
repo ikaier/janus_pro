@@ -4,7 +4,8 @@
 
     <%= puts product[:price] %>
 
-      <div class="card mb-3" style="min-width: 18rem;">
+      <div class="card mb-5" style="min-width: 18rem;">
+        <span class="tag tag-pill"><%= product[:price] %></span>
         <% if !(product[:photo].empty?) %>
           <img class="card-img-top" src='<%= product[:photo] %>' alt="...">
         <% else %>
