@@ -11,6 +11,10 @@
   color: white;
 }
 
+.btn-outline-secondary {
+  border-color: #ced4da;
+}
+
 .btn-outline-secondary:hover {
   background: #ff5252;
   border-color: #ff5252;
@@ -19,4 +23,9 @@
 .show > .btn-outline-secondary.dropdown-toggle {
   background: #ff5252;
   border-color: #ff5252;
+}
+
+.btn-group > .btn {
+  border-radius: 50px;
+  margin-top: 5px;
 }
