@@ -5,8 +5,8 @@ const loadingEvent = () => {
 
   form_input.addEventListener('submit', (event) => {
       event.preventDefault();
-      loading_block.classList.toggle("lds-roller");
-      canvas_screen.classList.toggle("running");
+      loading_block.classList.toggle("lds-circle");
+      //canvas_screen.classList.toggle("running");
 
       form_input.submit();
   });
