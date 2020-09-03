@@ -1,15 +1,15 @@
 <div class="container">
   <div class="card-deck">
     <% @infos.sort_by{|hah| hah[:price].scan(/\d+./).join('').to_f}.each do |product| %>
-      <div class="card mb-3" style="min-width: 18rem;">
+      <div class="card mb-5" style="min-width: 18rem;">
+      <span class="tag tag-pill"><%= product[:price] %></span>
         <% if !(product[:photo].empty?) %>
           <img class="card-img-top" src='<%= product[:photo] %>' alt="...">
         <% else %>
-          <img class="card-img-top" src="https://cdn1.iconfinder.com/data/icons/business-company-1/500/image-512.png" alt="...">
+          <img class="card-img-top " src="https://cdn1.iconfinder.com/data/icons/business-company-1/500/image-512.png" alt="...">
         <% end %>
         <div class="card-body">
           <h2 class="card-title"><%= product[:name][0..16] %></h2>
-          <span class="tag tag-pill"><%= product[:price] %></span>
         </div>
         <div class="card-footer">
           <a href='<%= product[:url] %>' class="btn btn-flat">Buy Now</a>

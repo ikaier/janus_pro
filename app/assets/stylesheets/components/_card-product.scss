@@ -5,6 +5,11 @@
 .container-fluid {
   max-width: 80%;
 }
+
+.card-deck {
+  position: relative;
+}
+
 .card-title {
   font-size: 20px;
   font-weight: bold;
@@ -28,16 +33,18 @@
 
 .card-img-top {
   max-width: 300px;
-  max-height: 300px;
+  height: 30vh;
+  object-fit: cover;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 60px;
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 
 .card-body {
   border-top: 1px solid #dad7d7;
+  object-fit: cover;
 }
 
 .card-footer {
@@ -46,6 +53,7 @@
   padding-top: 20px;
   padding-bottom: 20px;
   background-color: rgba(0, 0, 0, 0.01);
+  object-fit: cover;
 }
 
 .fa-heart {
@@ -107,8 +115,8 @@
 .tag-pill {
   border-radius: 3px;
   position: absolute;
-  top: 10px;
-  right: 20px;
+  bottom: 175px;
+  right: 30px;
   line-height: 36px;
   box-shadow: 1px 1px 4px #dcd5b9;
 }
