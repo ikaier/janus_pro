@@ -1,4 +1,6 @@
 <div class="container">
+  <h1> Please Sign Up</h1>
+  <p> welcome </p>
 <div class="row justify-content-center">
 <dvi class="text-center card col-6 m-5 p-5" action="#!">
 
@@ -7,7 +9,7 @@
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
+  <div class="form-inputs text-left">
     <%= f.input :email,
                 required: true,
                 autofocus: true,
@@ -25,7 +27,7 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Sign up", :class => "btn btn-primary btn-block my-4" %>
+    <%= f.button :submit, "Sign up", :class => "btn btn-flat my-4" %>
   </div>
 <% end %>
 </div>

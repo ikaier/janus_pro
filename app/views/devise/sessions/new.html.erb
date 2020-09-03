@@ -1,11 +1,13 @@
 <div class="container">
+  <h1> Please Sign In</h1>
+  <p> welcome </p>
 <div class="row justify-content-center">
-<dvi class="text-center card col-6 m-5 p-5" action="#!">
+<div class="text-center card col-6 m-5 p-5" action="#!">
 
     <p class="h4 mb-4">Sign in</p>
 
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
+  <div class="form-inputs text-left">
     <%= f.input :email,
                 required: false,
                 autofocus: true,
@@ -19,7 +21,7 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Log in", :class => "btn btn-primary btn-block my-4" %>
+    <%= f.button :submit, "Log in", :class => "btn btn-flat my-4" %>
   </div>
 <% end %>
 </div>
