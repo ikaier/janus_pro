@@ -2,8 +2,8 @@ import Typed from 'typed.js';
 
 const loadDynamicBannerText = () => {
   new Typed('#banner-typed-text', {
-    strings: ["Compare Prices From The Leading Stores", "Save Up To 80%"],
-    typeSpeed: 70,
+    strings: ["Save on Millions of Products", "Up To 80%!"],
+    typeSpeed: 100,
     loop: true
   });
 }
