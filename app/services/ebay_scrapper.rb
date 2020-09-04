@@ -31,7 +31,7 @@ class EbayScrapper
       infos[counter][:price] = element.text.strip
       counter = counter + 1
     end
-    return infos.first(6)
+    return infos.first(12)
   end
 
 end
