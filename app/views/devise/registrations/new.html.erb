@@ -15,6 +15,9 @@
                 autofocus: true,
                 :class => "form-control mb-4",
                 input_html: { autocomplete: "email" }%>
+    <%= f.input :photo, as: :file,
+                required: false,
+                direct_upload: true %>
     <%= f.input :password,
                 required: true,
                 :class => "form-control mb-4",
