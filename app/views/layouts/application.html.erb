@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html class="h-100">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177271455-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-177271455-1');
+    </script>
+
     <title>Welcome to Janus shopping website!</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -26,6 +36,7 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="7cacf2e8-5b20-4d0c-9e0e-daf6736d1568";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
   </head>
 
   <body>
